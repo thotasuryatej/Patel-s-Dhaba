@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patel's Dhaba - Menu</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #535353; /* Grey Background */
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Menu Container */
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        .menu-item {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            max-width: 600px; /* Limit image width */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Back Button */
+        .back-button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #535353;
+            background: #f2f2e6;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 30px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-container {
+                padding: 10px;
+            }
+
+            .menu-item img {
+                max-width: 90%; /* More responsive images */
+            }
+
+            .back-button {
+                font-size: 1.2em;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <!-- Menu Item 1 -->
+        <div class="menu-item">
+            <img src="menu1.jpg" alt="Dish 1">
+        </div>
+        
+        <!-- Menu Item 2 -->
+        <div class="menu-item">
+            <img src="menu2.jpg" alt="Dish 2">
+        </div>
+        
+        <!-- Menu Item 3 -->
+        <div class="menu-item">
+            <img src="menu3.jpg" alt="Dish 3">
+        </div>
+        
+        <!-- Menu Item 4 -->
+        <div class="menu-item">
+            <img src="menu4.jpg" alt="Dish 4">
+        </div>
+
+        <!-- Add More Menu Items as Needed -->
+
+        <!-- Back Button -->
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
