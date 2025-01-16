@@ -13,6 +13,7 @@
             background-color: #535353; /* Grey Background */
             color: #fff;
             overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         /* Menu Container */
@@ -22,7 +23,7 @@
             align-items: center;
             padding: 30px;
             overflow-y: auto;
-            max-height: 100vh;
+            max-height: 100vh; /* Make the menu scrollable */
         }
 
         .menu-item {
@@ -31,9 +32,10 @@
         }
 
         .menu-item img {
-            width: 100%;
-            max-width: 600px; /* Limit image width */
-            height: auto;
+            width: 90%; /* Set a consistent width */
+            max-width: 600px; /* Limit maximum width */
+            height: auto; /* Keep aspect ratio */
+            aspect-ratio: 16 / 9; /* Enforce same height for all */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
@@ -60,36 +62,6 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-
-        @keyframes bounceIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .menu-container {
-                padding: 10px;
-            }
-
-            .menu-item img {
-                max-width: 90%; /* More responsive images */
-            }
-
-            .back-button {
-                font-size: 1.2em;
-                padding: 12px 25px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -113,7 +85,7 @@
         <div class="menu-item">
             <img src="menu4.jpg" alt="Dish 4">
         </div>
-
+        
         <!-- Add More Menu Items as Needed -->
 
         <!-- Back Button -->
