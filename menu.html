@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #202626; /* Grey Background */
+            background-color: #202626;
             color: #fff;
             overflow-x: hidden;
         }
@@ -28,11 +28,12 @@
         .menu-item {
             margin: 20px 0;
             text-align: center;
+            position: relative;
         }
 
         .menu-item img {
             width: 100%;
-            max-width: 600px; /* Limit image width */
+            max-width: 600px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -41,6 +42,15 @@
 
         .menu-item img:hover {
             transform: scale(1.05);
+        }
+
+        /* Divider Line */
+        .divider {
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(to right, #f2f2e6, transparent);
+            margin: 20px auto;
+            border-radius: 5px;
         }
 
         /* Back Button */
@@ -61,28 +71,13 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        @keyframes bounceIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
         @media (max-width: 768px) {
             .menu-container {
                 padding: 10px;
             }
 
             .menu-item img {
-                max-width: 90%; /* More responsive images */
+                max-width: 90%;
             }
 
             .back-button {
@@ -94,39 +89,33 @@
 </head>
 <body>
     <div class="menu-container">
-        <!-- Menu Item 1 -->
         <div class="menu-item">
             <img src="menu1.jpg" alt="Dish 1">
         </div>
-        
-        <!-- Menu Item 3 -->
+        <div class="divider"></div>
         <div class="menu-item">
             <img src="menu2.jpg" alt="Dish 2">
         </div>
-        
-        <!-- Menu Item 4 -->
+        <div class="divider"></div>
         <div class="menu-item">
             <img src="menu3.jpg" alt="Dish 3">
         </div>
-
+        <div class="divider"></div>
         <div class="menu-item">
             <img src="menu4.jpg" alt="Dish 4">
         </div>
-
-         <div class="menu-item">
+        <div class="divider"></div>
+        <div class="menu-item">
             <img src="menu5.jpg" alt="Dish 5">
         </div>
-
-         <div class="menu-item">
+        <div class="divider"></div>
+        <div class="menu-item">
             <img src="menu6.jpg" alt="Dish 6">
         </div>
-
-         <div class="menu-item">
+        <div class="divider"></div>
+        <div class="menu-item">
             <img src="menu7.jpg" alt="Dish 7">
         </div>
-
-
-        <!-- Back Button -->
         <a href="index.html" class="back-button">Back to Home</a>
     </div>
 </body>
